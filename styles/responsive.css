@@ -1,0 +1,51 @@
+/* responsive.css */
+/* @media screen and (min-width:600px) {
+    /* 1행 글자크기, 여백 등
+    #wrap .intro h1 span:nth-child(1) {font-size: 1.5rem;}
+    #wrap .intro h1 span:nth-child(2) {font-size: 1.75rem;}
+    /* 3행 프로젝트 이미지 w100%
+    #wrap .project_wrap .project .title_thum .mockup img {
+        height: auto;/* 100% 덮어쓰기값으로 auto변경 */
+        /* width: 100%; */
+    /* } */
+    /* 4행 그래픽 이미지 확대
+    #wrap .project_wrap .graphic_wrap .graphic_container a {width: 246px; height: 290px;}
+/* 사용자가 보는 기기 너비가 600보다 크면 */
+/* @media screen and (min-width:840px) { */
+    /* 2행 info -> 1행 2열 레이아웃 구조 변경 */
+    /* #wrap .info {
+        height: auto; flex-flow: row nowrap;
+        justify-content: center; align-items: top;
+        padding: 150px 0; gap: 70px;
+    }
+    #wrap .info .details {display: block;}
+    #wrap .info .details dl dd {position: relative; padding-left: 15px;}
+    #wrap .info .details dl dd::before {
+        content: ''; display: block;
+        width: 4px; height: 4px;
+        position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+        background-color: #222; border-radius: 50%;
+    }
+    #wrap .info .profile {width: 450px; height: 100%;}
+    #wrap .info .profile .photo {width: 300px; height: 300px;}
+    #wrap .info .details dl {padding-bottom: 30px;}
+    #wrap .info .details dl dt {font-size: 1.25rem; font-weight: 600; line-height: 2;}
+    #wrap .info .details dl dd {line-height: 2;}
+    /* 3행 web -> 1행 2열 레이아웃 구조 변경 */
+    /* #wrap .project_wrap h1 {font-size: 1.88rem; margin-bottom: 50px;}
+    #wrap .project_wrap .project {
+        width: 100%;
+        display: flex; flex-flow: row nowrap; align-items: flex-end;
+        gap: 40px; padding: 0 0 150px; 
+    }
+    #wrap .project_wrap h1+p {font-size: 1.13rem; margin-bottom: 40px;}
+    #wrap .project_wrap .project .title_thum h2 {font-size: 1.5rem;}
+    #wrap .project_wrap .project .title_thum .mockup {margin-bottom: 0;}
+    #wrap .project_wrap .project .details {}
+    #wrap .project_wrap .project .details .info_box {font-size: 1rem;}
+    #wrap .project_wrap .project .details .plan {font-size: 1rem;}
+    #wrap .project_wrap .project .details .link {text-align: left;}
+    #wrap .project_wrap .project .details .link a {font-size: 1.25rem; padding: 10px 40px;}
+    /* 4행 그래픽 이미지 확대 */
+    /* #wrap .project_wrap .graphic_wrap .graphic_container a {width: 298px; height: 360px;} */
+/* }사용자가 보는 기기 너비가 840보다 크면 */
