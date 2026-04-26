@@ -1,3 +1,10 @@
+/* 
+ * GitHub Repository Phishing Alert Appeal & Project Verification
+이 페이지는 깃허브에서 발생한 피싱 경고 오탐지(False Positive)를 해명하고, 해당 코드가 순수한 학습 및 포트폴리오용임을 증명하기 위해 작성되었습니다.
+This CSS is part of a student project. 
+Any resemblance to real-world commercial sites is purely for design practice.
+*/
+
 /* index.css */
 /* =========================================================== 스크롤바 디자인 */
 /* Firefox */
@@ -54,9 +61,13 @@ body {
 #wrap header #gnb {display: inline-block;}
 #wrap header #gnb a {
     font-family: 'Paperozi'; font-size: 1rem;
-    line-height: 70px; display: inline-block; padding: 0 25px;
+    color: #777; font-weight: 500;
+    line-height: 70px; display: inline-block;
+    padding: 0 15px; margin-right: 20px;
 }
-#wrap header #gnb a.active {font-weight: 600; color: red; border-bottom: 1px solid red;}
+#wrap header #gnb a.active {font-weight: 600; color: #222; border-bottom: 1px solid #555;}
+#wrap header #gnb a:hover {font-weight: 600; color: #222;}
+/* #wrap header #gnb a:hover {  font-weight: 500;  color: #E11D48;} */
 
 /* =========================================================== 공통 디자인 */
 /* 폰트 스타일 */
@@ -166,7 +177,7 @@ body {
 }
 #wrap main .web_p_wrap .project_title {}
 #wrap main .web_p_wrap .project_title > h1 {}
-#wrap main .web_p_wrap .project_title > p {margin-top: 30px; line-height: 1.8;}
+#wrap main .web_p_wrap .project_title > p {margin-top: 30px; line-height: 1.8; text-wrap: nowrap;}
 #wrap main .web_p_wrap .web_p_contents {display: flex; gap: 50px;}
 #wrap main .web_p_wrap .web_p_contents .web_project {}
 #wrap main .web_p_wrap .web_p_contents .web_project .mockup {width: 500px;}
@@ -192,16 +203,17 @@ body {
 #wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_info .text_box .port_link {
     border-bottom: 1px solid #222; padding-bottom: 4px;
 }
-#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link {}
-#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link > a {
-    padding: 15px 30px; border-radius: 30px; font-size: 0.94rem; display: inline-block;
-}
+#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link {display: flex; gap: 12px; align-items: center;}
+#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link > a {border: 1px solid #bbb; transition: 0.3s; }
 #wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .proposal {
-    border: 1px solid #999; margin-right: 10px;
+    padding: 15px 25px; border-radius: 30px; font-size: 0.94rem;
 }
-#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .prototype {
-    font-weight: 500; background: #222; color: #fff;
+#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .proposal:hover {
+    border:1px solid #000; background: #222; color: #fff;
 }
+#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .prototype {border-radius: 50%;}
+#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .prototype:hover {border: 1px solid #000;}
+#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .prototype img {width: 100%; display: block;}
 /* =========================================================== 4. 기타 작업물 */
 #wrap main .works_wrap {position: relative;}/* 세로선 기준(부모) */
 #wrap main .works_wrap::before {/* 세로선 */
@@ -212,7 +224,7 @@ body {
 /* ----------------------------------------------------------- 그래픽 / 영상 공통 디자인 */
 #wrap main .works_wrap .graphic_wrap,
 #wrap main .works_wrap .video_wrap {
-    display: flex; justify-content: space-between; align-items: center;
+    display: flex; justify-content: space-between; align-items: center; text-wrap: nowrap;
 }
 #wrap main .works_wrap .mockup img {border-radius: 20px;}
 #wrap main .works_wrap .video_contents,
