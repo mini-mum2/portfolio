@@ -205,14 +205,34 @@ body {
 }
 #wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link {display: flex; gap: 12px; align-items: center;}
 #wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link > a {border: 1px solid #bbb; transition: 0.3s; }
-#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .proposal {
-    padding: 15px 25px; border-radius: 30px; font-size: 0.94rem;
+/* ---------------------------------------------------------------------------------------공통 hover */
+#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .prototype {
+    border-radius: 50%; position: relative;
 }
-#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .proposal:hover {
-    border:1px solid #000; background: #222; color: #fff;
-}
-#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .prototype {border-radius: 50%;}
 #wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .prototype:hover {border: 1px solid #000;}
+/* ---------------------------------------------------------------------------------------개별 hover */
+
+#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .proposal::after {/* 기획서 */
+    content: '기획서';
+    position: absolute; left: 50%; transform: translateX(-50%); bottom: -30px;
+    white-space: nowrap; font-size: 0.88rem; color: #222;
+    transition: 0.3s; opacity: 0;
+}
+#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .proposal:hover::after {opacity: 1;}
+#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .figma::after {/* 피그마 */
+    content: '피그마 프로토타입';
+    position: absolute; left: 50%; transform: translateX(-50%); bottom: -30px;
+    white-space: nowrap; font-size: 0.88rem; color: #222;
+    transition: 0.3s; opacity: 0;
+}
+#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .figma:hover::after {opacity: 1;}
+#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .github::after {/* 깃허브 */
+    content: '깃허브 프로토타입';
+    position: absolute; left: 50%; transform: translateX(-50%); bottom: -30px;
+    white-space: nowrap; font-size: 0.88rem; color: #222;
+    transition: 0.3s; opacity: 0;
+}
+#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .github:hover::after {opacity: 1;}
 #wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .prototype img {width: 100%; display: block;}
 /* =========================================================== 4. 기타 작업물 */
 #wrap main .works_wrap {position: relative;}/* 세로선 기준(부모) */
