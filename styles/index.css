@@ -299,73 +299,25 @@ body {
 #wrap main .works_wrap .video_wrap .video_contents .video_project .mockup .hover_box > p {}
 #wrap main .works_wrap .video_wrap .video_contents .video_project .mockup .hover_box .hover_title {}
 #wrap main .works_wrap .video_wrap .video_contents .video_project .mockup .hover_box .hover_text {}
+/* ----------------------------------------------------------- 팝업 */
+#wrap main .works_wrap .works_popup_bg {
+    position: fixed; left: 0; top: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5); z-index: 999;
+}
+#wrap main .works_wrap .works_popup_bg .popup {
+    width: 60%; height: 70vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+}
+#wrap main .works_wrap .works_popup_bg .popup > p {}
+#wrap main .works_wrap .works_popup_bg .popup > img {width: 100%;}
 
 /* =========================================================== footer */
 #wrap footer {background: #1f1f1f; height: 200px; text-align: center;}
 #wrap footer .copyright {color: #eee; font-weight: 300; line-height: 200px;}
 
 
-
-/* ===========================================================!!공통 프로젝트 선택자 */
-/* 
-#wrap .project_wrap {padding-bottom: 300px;}
-#wrap .project_wrap h1 {
-    font-size: 1.5rem; line-height: 2.0; text-align: center; margin-bottom: 30px;
-} */
-/* 
-#wrap .project_wrap .project {padding: 0 15px 100px;}
-#wrap .project_wrap .project .title_thum h2 {
-    font-size: 1.13rem; font-weight: 600;
-    margin-bottom: 10px; line-height: 1.5;
-}
-#wrap .project_wrap .project .title_thum h2 span {font-weight: 600; color: #FFA640;}
-#wrap .project_wrap .project .title_thum .mockup {margin-bottom: 20px;}
-#wrap .project_wrap .project .title_thum .mockup img {width: 100%;}
-#wrap .project_wrap .project .details {}
-#wrap .project_wrap .project .details .info_box {margin-bottom: 30px; font-size: 0.88rem;}
-#wrap .project_wrap .project .details .info_box li {
-    line-height: 1.7;
-    position: relative; padding-left: 15px;
-}
-#wrap .project_wrap .project .details .info_box li::before {
-    content: ''; display: block;
-    width: 4px; height: 4px; 
-    position: absolute; left: 0; top: 50%; transform: translateY(-50%);
-    background-color: #222; border-radius: 50%;
-} */
-/* #wrap .project_wrap .project .info_box li:nth-child(3)::before {top:20%} -> 2줄*/
-/* #wrap .project_wrap .project .details .info_box li span {font-weight: 600; color: #ff8800;}
-#wrap .project_wrap .project .details .plan {
-    font-size: 0.88rem; line-height: 1.7;
-    margin-bottom: 30px;
-}
-#wrap .project_wrap .project .details .plan span {
-    display: block; font-weight: 600; line-height: 1.7; color: #ff8800;
-}
-#wrap .project_wrap .project .details .web_link {text-align: center;}
-#wrap .project_wrap .project .details .web_link a {
-    color: #fff;
-    display: inline-block;
-    padding: 12px 22px;
-    border-radius: 12px;
-    font-size: 1.13rem; font-weight: 400; line-height: 1.7;
-}
-#wrap .project_wrap .project .details .web_link .proposal {background-color: #FFA640; margin-right: 10px;}
-#wrap .project_wrap .project .details .web_link .proposal:hover {background-color: #ff8800;}
-#wrap .project_wrap .project .details .web_link .prototype {background-color: #555;}
-#wrap .project_wrap .project .details .web_li .prototype:hover {background-color: #000;} */
-/* ===========================================================개별 프로젝트 선택자 */
-#wrap .project_wrap .project1 {}
-#wrap .project_wrap .project1 .title_thum h2 {}
-#wrap .project_wrap .project1 .title_thum .mockup {}
-#wrap .project_wrap .project1 .title_thum .mockup img {}
-#wrap .project_wrap .project1 .details .info {}
-#wrap .project_wrap .project1 .details .info li {}
-#wrap .project_wrap .project1 .details .plan {}
-#wrap .project_wrap .project1 .details .web_li {}
-#wrap .project_wrap .project1 .details .web_li a {}
-#wrap .project_wrap .project1 .details .web_li .proposal {}
-#wrap .project_wrap .project1 .details .web_li .prototype {}
 /* ===========================================================그래픽디자인 프로젝트 */
 /* #wrap .project_wrap h1+p {
     text-align: center; font-size: 0.88rem; margin-bottom: 20px;
