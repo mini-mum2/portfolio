@@ -178,6 +178,7 @@ body {
 #wrap main .web_p_wrap .project_title {}
 #wrap main .web_p_wrap .project_title > h1 {}
 #wrap main .web_p_wrap .project_title > p {margin-top: 30px; line-height: 1.8; text-wrap: nowrap;}
+
 #wrap main .web_p_wrap .web_p_contents {display: flex; gap: 50px;}
 #wrap main .web_p_wrap .web_p_contents .web_project {}
 #wrap main .web_p_wrap .web_p_contents .web_project .mockup {width: 500px;}
@@ -205,12 +206,17 @@ body {
 }
 #wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link {display: flex; gap: 12px; align-items: center;}
 #wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link > a {border: 1px solid #bbb; transition: 0.3s; }
-/* ---------------------------------------------------------------------------------------공통 hover */
+
+/* --------------------------------------------------------------------------------------- 러쉬 아이콘 숨기기 */
+#wrap main .web_p_wrap .web_p_contents .project2 .web_link .proposal {display: none;}
+#wrap main .web_p_wrap .web_p_contents .project2 .web_link .github {display: none;}
+/* --------------------------------------------------------------------------------------- 공통 hover */
 #wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .prototype {
     border-radius: 50%; position: relative;
 }
 #wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .prototype:hover {border: 1px solid #000;}
-/* ---------------------------------------------------------------------------------------개별 hover */
+
+/* --------------------------------------------------------------------------------------- 개별 hover */
 
 #wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .proposal::after {/* 기획서 */
     content: '기획서';
