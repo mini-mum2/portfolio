@@ -299,71 +299,37 @@ body {
 #wrap main .works_wrap .video_wrap .video_contents .video_project .mockup .hover_box > p {}
 #wrap main .works_wrap .video_wrap .video_contents .video_project .mockup .hover_box .hover_title {}
 #wrap main .works_wrap .video_wrap .video_contents .video_project .mockup .hover_box .hover_text {}
-/* ----------------------------------------------------------- 팝업 */
-#wrap main .works_wrap .works_popup_bg {
+/* ----------------------------------------------------------- 팝업(공통) */
+#wrap main .works_wrap .popup_bg {
     position: fixed; left: 0; top: 0; width: 100%; height: 100%;
     background-color: rgba(0,0,0,0.5); z-index: 999;
-    /* display: none; 초기숨기기 */
 }
-#wrap main .works_wrap .works_popup_bg .popup_list {
-    width: 60%; height: 70vh;
+/* ----------------------------------------------------------- 팝업 이미지 */
+#wrap main .works_wrap .popup_bg_i {display: none;}
+#wrap main .works_wrap .popup_bg_i .popup_i {
+    width: 50%; height: 80vh;
     overflow-x: hidden;
     overflow-y: auto;
     position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
 }
-#wrap main .works_wrap .works_popup_bg .popup_list > img {width: 100%;}
-#wrap main .works_wrap .works_popup_bg .popup_list .popup {}
-#wrap main .works_wrap .works_popup_bg .popup_list .popup iframe {}
-/* #wrap main .works_wrap .works_popup_bg .popup_list .popup:nth-child(1) {display: none;} */
-#wrap main .works_wrap .works_popup_bg .popup_list .popup:nth-child(2) {display: none;}
-#wrap main .works_wrap .works_popup_bg .popup_list .popup:nth-child(3) {display: none;}
-#wrap main .works_wrap .works_popup_bg .popup_list .popup:nth-child(4) {display: none;}
-#wrap main .works_wrap .works_popup_bg .popup_list .popup:nth-child(5) {display: none;}
-#wrap main .works_wrap .works_popup_bg .popup_list .popup:nth-child(6) {display: none;}
+
+#wrap main .works_wrap .popup_bg_i {}
+#wrap main .works_wrap .popup_bg_i .popup_i {}
+#wrap main .works_wrap .popup_bg_i .popup_i > img {width: 100%;}
+
+/* ----------------------------------------------------------- 팝업 비디오 */
+#wrap main .works_wrap .popup_bg_v {display: none;}
+#wrap main .works_wrap .popup_bg_v .popup_v {
+    width: 60%; height: 70vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+}
+
+#wrap main .works_wrap .popup_bg_v {}
+#wrap main .works_wrap .popup_bg_v .popup_v {}
+#wrap main .works_wrap .popup_bg_v .popup_v > iframe {width: 100%; height: 100%;}
 
 /* =========================================================== footer */
 #wrap footer {background: #1f1f1f; height: 200px; text-align: center;}
 #wrap footer .copyright {color: #eee; font-weight: 300; line-height: 200px;}
-
-
-/* ===========================================================그래픽디자인 프로젝트 */
-/* #wrap .project_wrap h1+p {
-    text-align: center; font-size: 0.88rem; margin-bottom: 20px;
-}
-#wrap .project_wrap .graphic_wrap {
-    padding: 0 15px;
-    overflow: hidden; width: calc(100% - 30px); margin: 0 auto;
-}
-#wrap .project_wrap .graphic_wrap .graphic_container {
-    display: flex; gap: 20px; flex-flow: row nowrap;
-    width: max-content;
-}
-#wrap .project_wrap .graphic_wrap .graphic_container a {
-    width: 123px; height: 150px; overflow: hidden;
-    position: relative;
-}
-#wrap .project_wrap .graphic_wrap .graphic_container a::after {
-    content: ''; position: absolute; left: 0; top: 0; width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0; transition: 0.3s;
-}
-#wrap .project_wrap .graphic_wrap .graphic_container a:hover::after {
-    opacity: 1;
-}
-#wrap .project_wrap .graphic_wrap .graphic_container a img {width: 100%; transition: 0.3s;}
-#wrap .project_wrap .graphic_wrap .graphic_container a:hover img {transform: scale(1.05);} */
-/* -----------------------------------------------------------popup */
-/* #wrap .project_wrap .graphic_popup_bg {
-    position: fixed; left: 0; top: 0; width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); */
-    /* display: flex; justify-content: center; align-items: center; */
-    /* display: none;
-}
-#wrap .project_wrap .graphic_popup_bg .popup {
-    width: 80%; height: 60vh;
-    /* overflow-x: hidden; */
-    /* overflow-y: auto;
-    background-color: #fff;
-    position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
-} */
-/* #wrap .project_wrap .graphic_popup_bg .popup img {width: 100%;} */

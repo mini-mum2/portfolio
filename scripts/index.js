@@ -60,14 +60,44 @@ window.addEventListener('scroll', function () { //스크롤 이벤트
 
 
 //팝업
-// const worksContent = document.querySelectorAll('.mockup');
-// const popupBg = document.querySelector('.works_popup_bg');
-// const popup = document.querySelectorAll('.popup img');
-// console.log(worksContent, popupBg, popup);
+const portGraphic = [
+    'images/works/popup_01.jpg',
+    'images/works/popup_02.png',
+    'images/works/popup_03.jpg',
+];
 
+const portVideo = [
+    'https://www.youtube.com/embed/uct20GlATOk?autoplay=1&mute=1&controls=1&rel=0',
+    'https://www.youtube.com/embed/iKj92yBiVL4',
+    'https://www.youtube.com/embed/BiUw6L2afos?feature=share',
+];
 
+const graphicA = document.querySelectorAll('.grap_project a');
+const graphicPopup = document.querySelector('.popup_bg_i');
+const videoA = document.querySelectorAll('.video_project a');
+const videoPopup = document.querySelector('.popup_bg_v');
 
+//console.log(graphicA, graphicPopup, videoA, videoPopup);
 
+//그래픽 팝업
+for(let ga of graphicA){
+    ga.addEventListener('click', function(e){
+        e.preventDefault();
+        graphicPopup.style.display = 'block';
+        graphicPopup.children[0].children[0].src = portGraphic[ga.dataset.index];
+        document.body.style.overflow = 'hidden';
+    })
+}
+
+//비디오 팝업
+for(let vd of videoA){
+    vd.addEventListener('click', function(e){
+        e.preventDefault();
+        videoPopup.style.display = 'block';
+        videoPopup.children[0].children[0].src = portVideo[vd.dataset.index];
+        document.body.style.overflow = 'hidden';
+    })
+}
 
 
 
