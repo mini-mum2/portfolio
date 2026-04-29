@@ -79,7 +79,7 @@ const portGraphic = [{
 }
 ];
 const portVideo = [
-    'https://www.youtube.com/embed/uct20GlATOk?autoplay=1&mute=1&controls=1&rel=0',
+    'https://www.youtube.com/embed/uct20GlATOk',
     'https://www.youtube.com/embed/iKj92yBiVL4',
     'https://www.youtube.com/embed/BiUw6L2afos?feature=share',
 ];
