@@ -59,6 +59,17 @@ window.addEventListener('scroll', function () { //스크롤 이벤트
 });
 
 
+//팝업
+// const worksContent = document.querySelectorAll('.mockup');
+// const popupBg = document.querySelector('.works_popup_bg');
+// const popup = document.querySelectorAll('.popup img');
+// console.log(worksContent, popupBg, popup);
+
+
+
+
+
+
 
 //1. 그래픽 영역 부모 안 a(1)를 클릭 시(href#처리)
 //2. 클릭한 a안에 이미지 경로를 인식(저장)
