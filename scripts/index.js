@@ -59,13 +59,25 @@ window.addEventListener('scroll', function () { //스크롤 이벤트
 });
 
 
-//팝업
-const portGraphic = [
-    'images/works/popup_01.jpg',
-    'images/works/popup_02.png',
-    'images/works/popup_03.jpg',
-];
+//팝업 JS
 
+const portGraphic = [{
+    //클릭했을때 팝업 이미지
+    src: 'images/works/popup_01.jpg',
+    //컨텐츠 가로 크기
+    w: 40,
+    //컨텐츠 세로 크기
+    h: 90,
+},{
+    src:'images/works/popup_02.png',
+    w: 30,
+    h: 90,
+},{
+    src: 'images/works/popup_03.jpg',
+    w: 40,
+    h: 90,
+}
+];
 const portVideo = [
     'https://www.youtube.com/embed/uct20GlATOk?autoplay=1&mute=1&controls=1&rel=0',
     'https://www.youtube.com/embed/iKj92yBiVL4',
@@ -77,66 +89,39 @@ const graphicPopup = document.querySelector('.popup_bg_i');
 const videoA = document.querySelectorAll('.video_project a');
 const videoPopup = document.querySelector('.popup_bg_v');
 
+
 //console.log(graphicA, graphicPopup, videoA, videoPopup);
 
-//그래픽 팝업
+//그래픽 팝업 클릭이벤트
 for(let ga of graphicA){
-    ga.addEventListener('click', function(e){
-        e.preventDefault();
-        graphicPopup.style.display = 'block';
-        graphicPopup.children[0].children[0].src = portGraphic[ga.dataset.index];
-        document.body.style.overflow = 'hidden';
+    ga.addEventListener('click', function(){
+        graphicPopup.style.display = 'block'; //컨텐츠 보이기
+        graphicPopup.children[0].children[0].src = portGraphic[ga.dataset.index].src;
+        graphicPopup.children[0].style.width = portGraphic[ga.dataset.index].w+'%';
+        graphicPopup.children[0].style.height = portGraphic[ga.dataset.index].h+'vh';
+        document.body.style.overflow = 'hidden'; //body 영역 스크롤 안되게 설정
     })
 }
 
-//비디오 팝업
+//비디오 팝업 클릭이벤트
 for(let vd of videoA){
-    vd.addEventListener('click', function(e){
-        e.preventDefault();
+    vd.addEventListener('click', function(){
         videoPopup.style.display = 'block';
         videoPopup.children[0].children[0].src = portVideo[vd.dataset.index];
         document.body.style.overflow = 'hidden';
     })
 }
 
+const popupGaClose = document.querySelector('.close_ga');
+const popupVdClose = document.querySelector('.close_vd');
 
-
-//1. 그래픽 영역 부모 안 a(1)를 클릭 시(href#처리)
-//2. 클릭한 a안에 이미지 경로를 인식(저장)
-//3. 숨긴 팝업(2)을 보이게 하면서
-//4. 팝업안에 이미지 경로에 클릭한 a의 이미지경로를 대입
-//5. 팝업 영역 또는 팝업 안 X버튼(3) 클릭 시
-//6. 팝업 숨기기
-// const graphic_project_a = document.querySelectorAll('.graphic_container a');
-// const graphic_popup = document.querySelector('.graphic_popup_bg');
-// const graphic_popup_close = document.querySelector('#close');
-
-// console.log(graphic_project_a, graphic_popup, graphic_popup_close);
-
-// console.log(graphic_project_a[0].children[0].src);
-// console.log(graphic_popup.children[0].children[1].src);
-// console.log(graphic_popup_close.parentNode.parentNode.parentNode);
-
-// function graphic_func(event, index, w=80, h=60){ //1
-//     event.preventDefault() //a태그의 href 기본기능 막기함수
-//     //console.log('클릭테스트');
-//     let aSrc = graphic_project_a[index].children[0].src; //2
-//     graphic_popup.style.display = 'block'; //3
-//     graphic_popup.children[0].children[1].src = aSrc; //4
-//     //실행 그래픽이미지에 맞는 비율로 팝업 비율 조정하기
-//     graphic_popup.children[0].style.width = w+'%'; // == `${w}%`
-//     graphic_popup.children[0].style.height = h+'vh'; // == `${h}vh`
-//     //팝업이 실행됐을 때 뒤쪽 body의 전체 스크롤을 막기
-//     document.body.style.overflow = 'hidden';
-// }
-// graphic_project_a[0].addEventListener('click',function(e){graphic_func(e, 0, 60, 90)})
-// graphic_project_a[1].addEventListener('click',function(e){graphic_func(e, 1, 30, 80)})
-// graphic_project_a[2].addEventListener('click',function(e){graphic_func(e, 2, 30, 90)})
-// graphic_project_a[3].addEventListener('click',function(e){graphic_func(e, 3, 20, 70)})
-// graphic_project_a[4].addEventListener('click',function(e){graphic_func(e, 4, 30, 80)})
-// graphic_project_a[5].addEventListener('click',function(e){graphic_func(e, 5, 40, 90)})
-
-// graphic_popup_close.addEventListener('click',function(){ //5
-//     graphic_popup_close.parentNode.parentNode.parentNode.style.display = 'none'; //6
-//     document.body.style.overflow = 'auto';
-// })
+//그래픽 팝업 닫기
+popupGaClose.addEventListener('click',function(){
+    popupGaClose.parentNode.style.display = 'none'; 
+    document.body.style.overflow = 'auto'; //body 영역 스크롤 다시 되게 초기화
+})
+//비디오 팝업 닫기
+popupVdClose.addEventListener('click',function(){
+    popupVdClose.parentNode.parentNode.style.display = 'none';
+    document.body.style.overflow = 'auto';
+})
