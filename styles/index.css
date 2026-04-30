@@ -29,9 +29,9 @@ body {
     /* margin: 0 auto; */
     /* overflow-x: hidden; *//* x축 나간요소와 가로스크롤 숨기기 */
     /* height: 100vh; */
-    min-width: 1300px; /* 최소 제한 너비(고정) */
+    min-width: 1800px; /* 최소 제한 너비(고정) */
     background-image: url(../images/paper_texture.jpg);
-    background-size: contain; /* background-color: #999; */
+    background-size: contain;
 }
 /* =========================================================== font */
 /* font-페이퍼로지 */
@@ -55,10 +55,10 @@ body {
 }
 /* =========================================================== header */
 #wrap header {
-    position: fixed; left: 0; top: 0; width: 100%; z-index: 999;
+    position: fixed; left: 0; top: 0; width: 100%;; z-index: 999;
     padding: 0 130px; background: rgba(255, 255, 255, 0.8);
 }
-#wrap header #gnb {display: inline-block;}
+#wrap header #gnb {display: inline-block; white-space: nowrap;}
 #wrap header #gnb a {
     font-family: 'Paperozi'; font-size: 1rem;
     color: #777; font-weight: 500;
@@ -67,7 +67,6 @@ body {
 }
 #wrap header #gnb a.active {font-weight: 600; color: #222; border-bottom: 1px solid #555;}
 #wrap header #gnb a:hover {font-weight: 600; color: #222;}
-/* #wrap header #gnb a:hover {  font-weight: 500;  color: #E11D48;} */
 
 /* =========================================================== 공통 디자인 */
 /* 폰트 스타일 */
