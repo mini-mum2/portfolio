@@ -209,11 +209,20 @@ body {
 /* --------------------------------------------------------------------------------------- 러쉬 아이콘 숨기기 */
 #wrap main .web_p_wrap .web_p_contents .project2 .web_link .proposal {display: none;}
 #wrap main .web_p_wrap .web_p_contents .project2 .web_link .github {display: none;}
-/* --------------------------------------------------------------------------------------- 공통 hover */
-#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .prototype {
+/* --------------------------------------------------------------------------------------- 공통 hover(우선 뉴발만) */
+#wrap main .web_p_wrap .web_p_contents .project1 .web_text .web_link .prototype {
     border-radius: 50%; position: relative;
 }
-#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .prototype:hover {border: 1px solid #000;}
+#wrap main .web_p_wrap .web_p_contents .project1 .web_text .web_link .prototype:hover {border: 1px solid #000;}
+/* --------------------------------------------------------------------------------------- 러쉬 아이콘 - 나중에 삭제하기 */
+#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .prototype {border-radius: 50%;}
+#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .text_link {
+    border: none; margin-right: 6px; line-height: 2; padding: 0 5px;
+    color: #555; border-bottom: 1px solid transparent;
+}
+#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .text_link:hover {
+    color: #000; border-bottom: 1px solid #000;
+}
 
 /* --------------------------------------------------------------------------------------- 개별 hover */
 
@@ -224,13 +233,15 @@ body {
     transition: 0.3s; opacity: 0;
 }
 #wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .proposal:hover::after {opacity: 1;}
-#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .figma::after {/* 피그마 */
+
+/* --------------------------------------------------------------------------------------------피그마 프로토타입(우선 뉴발만) */
+#wrap main .web_p_wrap .web_p_contents .project1 .web_text .web_link .figma::after {/* 피그마 */
     content: '피그마 프로토타입';
     position: absolute; left: 50%; transform: translateX(-50%); bottom: -30px;
     white-space: nowrap; font-size: 0.88rem; color: #222;
     transition: 0.3s; opacity: 0;
 }
-#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .figma:hover::after {opacity: 1;}
+#wrap main .web_p_wrap .web_p_contents .project1 .web_text .web_link .figma:hover::after {opacity: 1;}
 #wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .github::after {/* 깃허브 */
     content: '깃허브 프로토타입';
     position: absolute; left: 50%; transform: translateX(-50%); bottom: -30px;
