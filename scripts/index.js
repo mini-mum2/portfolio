@@ -108,7 +108,7 @@ const portGraphic = [{
     //컨텐츠 세로 크기
     h: 90,
 },{
-    src:'images/works/popup_02.png',
+    src:'images/works/popup_02.jpg',
     w: 30,
     h: 90,
 },{
@@ -116,7 +116,7 @@ const portGraphic = [{
     w: 40,
     h: 90,
 },{
-    src: 'images/works/popup_04.jpg',
+    src: 'images/works/popup_04.png',
     w: 30,
     h: 90,
 },{
