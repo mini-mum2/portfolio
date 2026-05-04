@@ -14,6 +14,12 @@ The similarity to the actual commercial site is purely for design practice.
     <meta name="description" content="브랜드의 감성과 사용성을 균형 있게 풀어내는 디자이너 최소이입니다.">
     <meta name="keywords" content="웹디자이너, 웹퍼블리셔, 프론트앤드개발자, 디자이너, 반응형웹앱">
     <title>포트폴리오 - 최소이</title>
+    <!--swiper 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--swiper 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- 웹글꼴 -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
     <!-- 파비콘 -->
@@ -233,37 +239,63 @@ The similarity to the actual commercial site is purely for design practice.
                     <div class="project_title">
                         <h1>Graphic Design</h1>
                     </div>
-                    <div class="grap_contents">
-                        <!-- 그래픽 디자인(1) -->
-                        <div class="grap_project project1">
-                            <a href="javascript:void(0)" class="mockup" data-index="0">
-                                <img src="./images/works/graphic_01.jpg" alt="">
-                                <div class="hover_box">
-                                    <p class="hover_title">3단 리플렛</p>
-                                    <p class="hover_text">Photoshop, Illustrator</p>
+                    <div class="swiper_wrap">
+                        <div class="grap_contents swiper">
+                            <div class="swiper-wrapper">
+                                <!-- 그래픽 디자인(1) -->
+                                <div class="grap_project project1 swiper-slide">
+                                    <a href="javascript:void(0)" class="mockup" data-index="0">
+                                        <img src="./images/works/graphic_01.jpg" alt="">
+                                        <div class="hover_box">
+                                            <p class="hover_title">3단 리플렛</p>
+                                            <p class="hover_text">Photoshop, Illustrator</p>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
-                        </div>
-                        <!-- 그래픽 디자인(2) -->
-                        <div class="grap_project project2">
-                            <a href="javascript:void(0)" class="mockup" data-index="1">
-                                <img src="./images/works/graphic_02.jpg" alt="">
-                                <div class="hover_box">
-                                    <p class="hover_title">포스터</p>
-                                    <p class="hover_text">Illustrator</p>
+                                <!-- 그래픽 디자인(2) -->
+                                <div class="grap_project project2 swiper-slide">
+                                    <a href="javascript:void(0)" class="mockup" data-index="1">
+                                        <img src="./images/works/graphic_02.jpg" alt="">
+                                        <div class="hover_box">
+                                            <p class="hover_title">포스터</p>
+                                            <p class="hover_text">Illustrator</p>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
-                        </div>
-                        <!-- 그래픽 디자인(3) -->
-                        <div class="grap_project project3">
-                            <a href="javascript:void(0)" class="mockup" data-index="2">
-                                <img src="./images/works/graphic_03.jpg" alt="">
-                                <div class="hover_box">
-                                    <p class="hover_title">상세페이지</p>
-                                    <p class="hover_text">Photoshop, Illustrator</p>
+                                <!-- 그래픽 디자인(3) -->
+                                <div class="grap_project project3 swiper-slide">
+                                    <a href="javascript:void(0)" class="mockup" data-index="2">
+                                        <img src="./images/works/graphic_03.jpg" alt="">
+                                        <div class="hover_box">
+                                            <p class="hover_title">상세페이지</p>
+                                            <p class="hover_text">Photoshop, Illustrator</p>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
+                                <!-- 그래픽 디자인(4) -->
+                                <div class="grap_project project4 swiper-slide">
+                                    <a href="javascript:void(0)" class="mockup" data-index="3">
+                                        <img src="./images/works/graphic_04.jpg" alt="">
+                                        <div class="hover_box">
+                                            <p class="hover_title">이벤트 팝업</p>
+                                            <p class="hover_text">Photoshop</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- 그래픽 디자인(5) -->
+                                <div class="grap_project project4 swiper-slide">
+                                    <a href="javascript:void(0)" class="mockup" data-index="4">
+                                        <img src="./images/works/graphic_05.jpg" alt="">
+                                        <div class="hover_box">
+                                            <p class="hover_title">SNS 이벤트 배너</p>
+                                            <p class="hover_text">Photoshop</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
+                        <div class="gra-prev swiper-button-prev"></div>
+                        <div class="gra-next swiper-button-next"></div>
                     </div>
                 </div>
                 <!-- 2. 영상 디자인 -->
@@ -273,40 +305,68 @@ The similarity to the actual commercial site is purely for design practice.
                         <h1>Motion & Video</h1>
                         <p>Premiere Pro, After Effects를 활용한<br>영상 편집 및 모션 그래픽 제작 경험을 보유하고 있습니다.</p>
                     </div>
-                    <div class="video_contents">
-                        <!-- 영상 디자인(1) -->
-                        <div class="video_project project1">
-                            <a href="javascript:void(0)" class="mockup" data-index="0">
-                                <img src="./images/works/video_01.jpg" alt="">
-                                <div class="play_icon"><img src="./images/play_icon.png" alt=""></div>
-                                <div class="hover_box">
-                                    <p class="hover_title">숏폼 콘텐츠</p>
-                                    <p class="hover_text">Premiere Pro, After Effects</p>
+                    <div class="swiper_wrap">
+                        <div class="video_contents swiper">
+                            <div class="swiper-wrapper">
+                                <!-- 영상 디자인(1) -->
+                                <div class="video_project project1 swiper-slide">
+                                    <a href="javascript:void(0)" class="mockup" data-index="0">
+                                        <img src="./images/works/video_01.jpg" alt="">
+                                        <div class="play_icon"><img src="./images/play_icon.png" alt=""></div>
+                                        <div class="hover_box">
+                                            <p class="hover_title">숏폼 콘텐츠</p>
+                                            <p class="hover_text">Premiere Pro, After Effects</p>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
-                        </div>
-                        <!-- 영상 디자인(2) -->
-                        <div class="video_project project2">
-                            <a href="javascript:void(0)" class="mockup" data-index="1">
-                                <img src="./images/works/video_02.jpg" alt="">
-                                <div class="play_icon"><img src="./images/play_icon.png" alt=""></div>
-                                <div class="hover_box">
-                                    <p class="hover_title">브랜딩 모션그래픽</p>
-                                    <p class="hover_text">Premiere Pro, After Effects</p>
+                                <!-- 영상 디자인(2) -->
+                                <div class="video_project project2 swiper-slide">
+                                    <a href="javascript:void(0)" class="mockup" data-index="1">
+                                        <img src="./images/works/video_02.jpg" alt="">
+                                        <div class="play_icon"><img src="./images/play_icon.png" alt=""></div>
+                                        <div class="hover_box">
+                                            <p class="hover_title">프로모션 영상</p>
+                                            <p class="hover_text">After Effects, Illustrator, Firefly</p>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
-                        </div>
-                        <!-- 영상 디자인(3) -->
-                        <div class="video_project project3">
-                            <a href="javascript:void(0)" class="mockup" data-index="2">
-                                <img src="./images/works/video_03.jpg" alt="">
-                                <div class="play_icon"><img src="./images/play_icon.png" alt=""></div>
-                                <div class="hover_box">
-                                    <p class="hover_title">모션 포스터</p>
-                                    <p class="hover_text">After Effects, Illustrator</p>
+                                <!-- 영상 디자인(3) -->
+                                <div class="video_project project3 swiper-slide">
+                                    <a href="javascript:void(0)" class="mockup" data-index="2">
+                                        <img src="./images/works/video_03.jpg" alt="">
+                                        <div class="play_icon"><img src="./images/play_icon.png" alt=""></div>
+                                        <div class="hover_box">
+                                            <p class="hover_title">숏폼 콘텐츠</p>
+                                            <p class="hover_text">Premiere Pro, After Effects</p>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
+                                <!-- 영상 디자인(4) -->
+                                <div class="video_project project4 swiper-slide">
+                                    <a href="javascript:void(0)" class="mockup" data-index="3">
+                                        <img src="./images/works/video_04.jpg" alt="">
+                                        <div class="play_icon"><img src="./images/play_icon.png" alt=""></div>
+                                        <div class="hover_box">
+                                            <p class="hover_title">브랜딩 모션그래픽</p>
+                                            <p class="hover_text">Premiere Pro, After Effects</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- 영상 디자인(5) -->
+                                <div class="video_project project4 swiper-slide">
+                                    <a href="javascript:void(0)" class="mockup" data-index="4">
+                                        <img src="./images/works/video_05.jpg" alt="">
+                                        <div class="play_icon"><img src="./images/play_icon.png" alt=""></div>
+                                        <div class="hover_box">
+                                            <p class="hover_title">모션 포스터</p>
+                                            <p class="hover_text">After Effects, Illustrator</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
+                        <div class="vd-prev swiper-button-prev"></div>
+                        <div class="vd-next swiper-button-next"></div>
                     </div>
                 </div>
                 <!-- (위) 이미지 클릭 시 실행되는 팝업 -->

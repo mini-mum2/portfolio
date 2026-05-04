@@ -59,8 +59,47 @@ window.addEventListener('scroll', function () { //스크롤 이벤트
 });
 
 
-//팝업 JS
+//그래픽 디자인 swiper
+const graphicSlide = document.querySelector('.graphic_wrap .swiper');
+//console.log(graphicSlide);
 
+const graphicSwiper = new Swiper(graphicSlide,{
+    loop:true,
+    autoplay:{
+        delay:3000,
+        //마우스 올라가면 일시정지(true)
+        pauseOnMouseEnter: true,
+    },
+    speed:1000,
+    spaceBetween: 20,
+    slidesPerView: 3,
+    navigation:{
+        prevEl:'.graphic_wrap .gra-prev',
+        nextEl:'.graphic_wrap .gra-next',
+    },
+})
+
+//영상 swiper
+const videoSlide = document.querySelector('.video_wrap .swiper');
+//console.log(videoSlide);
+
+const videoSwiper = new Swiper(videoSlide,{
+    loop:true,
+    autoplay:{
+        delay:3000,
+        pauseOnMouseEnter: true,
+    },
+    speed:1000,
+    spaceBetween: 20,
+    slidesPerView: 3,
+    navigation:{
+        prevEl:'.video_wrap .vd-prev',
+        nextEl:'.video_wrap .vd-next',
+    },
+})
+
+
+//팝업 JS
 const portGraphic = [{
     //클릭했을때 팝업 이미지
     src: 'images/works/popup_01.jpg',
@@ -76,10 +115,20 @@ const portGraphic = [{
     src: 'images/works/popup_03.jpg',
     w: 40,
     h: 90,
+},{
+    src: 'images/works/popup_04.jpg',
+    w: 30,
+    h: 90,
+},{
+    src: 'images/works/popup_05.jpg',
+    w: 30,
+    h: 90,
 }
 ];
 const portVideo = [
     'https://www.youtube.com/embed/uct20GlATOk',
+    'https://www.youtube.com/embed/cZ7jnEh35HI',
+    'https://www.youtube.com/embed/osl5rZtxhmY?feature=share',
     'https://www.youtube.com/embed/iKj92yBiVL4',
     'https://www.youtube.com/embed/BiUw6L2afos?feature=share',
 ];
@@ -88,8 +137,6 @@ const graphicA = document.querySelectorAll('.grap_project a');
 const graphicPopup = document.querySelector('.popup_bg_i');
 const videoA = document.querySelectorAll('.video_project a');
 const videoPopup = document.querySelector('.popup_bg_v');
-
-
 //console.log(graphicA, graphicPopup, videoA, videoPopup);
 
 //그래픽 팝업 클릭이벤트
