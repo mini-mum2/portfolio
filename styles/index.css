@@ -273,6 +273,12 @@ body {
     background-size: 60px;
     background-position: center;
     width: 60px; height: 60px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+#wrap main .works_wrap .swiper-button-prev:hover,
+#wrap main .works_wrap .swiper-button-next:hover {
+    background-color: #eee;
 }
 #wrap main .works_wrap .swiper-button-prev {left: -70px; background-image: url(../images/btn_prev.svg);}
 #wrap main .works_wrap .swiper-button-next {right: -70px; background-image: url(../images/btn_next.svg);}
