@@ -253,8 +253,8 @@ body {
 /* =========================================================== 4. 기타 작업물 */
 #wrap main .works_wrap {position: relative;}/* 세로선 기준(부모) */
 #wrap main .works_wrap::before {/* 세로선 */
-    position: absolute; content: ''; width: 1px; height: 180px;
-    left: 250px; top: 40%; transform: translateY(-40%);
+    position: absolute; content: ''; width: 1px; height: 150px;
+    left: 250px; top: 45%; transform: translateY(-45%);
     background: #ccc;
 }
 /* ----------------------------------------------------------- 그래픽 / 영상 공통 디자인 */
