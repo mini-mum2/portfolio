@@ -254,7 +254,7 @@ body {
 #wrap main .works_wrap {position: relative;}/* 세로선 기준(부모) */
 #wrap main .works_wrap::before {/* 세로선 */
     position: absolute; content: ''; width: 1px; height: 180px;
-    left: 250px; top: 50%; transform: translateY(-50%);
+    left: 250px; top: 40%; transform: translateY(-40%);
     background: #ccc;
 }
 /* ----------------------------------------------------------- 그래픽 / 영상 공통 디자인 */
@@ -301,6 +301,7 @@ body {
 #wrap main .works_wrap .video_wrap .project_title {}
 #wrap main .works_wrap .video_wrap .project_title {}
 #wrap main .works_wrap .video_wrap .project_title h1 {}
+#wrap main .works_wrap .video_wrap .project_title > p {margin-top: 30px; line-height: 1.8; text-wrap: nowrap;}
 #wrap main .works_wrap .video_wrap .video_contents {}
 #wrap main .works_wrap .video_wrap .video_contents .video_project {}
 #wrap main .works_wrap .video_wrap .video_contents .video_project .mockup {}
