@@ -77,7 +77,6 @@ body {
 /* 프로젝트 공통 */
 .project_title > h1 {font-family: 'Paperozi'; font-size: 1.5rem;}
 /* 메인 공통 패딩 */
-#wrap main .profile,
 #wrap main .web_p_wrap,
 #wrap main .works_wrap {height: 100vh;  padding: 100px 150px;}
 /* =========================================================== 1. intro */
@@ -108,8 +107,8 @@ body {
 
 /* =========================================================== 2. 프로필 */
 #wrap main .profile {
-    height: 100vh; /* padding: 100px 150px; */
-    display: flex; gap: 600px;
+    height: 100vh; padding: 150px 150px;
+    display: flex; justify-content: space-between;
     position: relative;/* 구분선 부모 */
 }
 #wrap main .profile::after {/* 구분선 */
@@ -131,17 +130,32 @@ body {
 #wrap main .profile .info .me .text_box > p {}
 #wrap main .profile .info .me .text_box .text_title {width: 80px;}
 #wrap main .profile .info .me .text_box .text_content {}
+#wrap main .profile .info .me .text_box:last-child .text_content {margin: 0;}/* E-mail margin-bottom 삭제 */
 /* right - 디테일 */
-#wrap main .profile .details_wrap {display: flex; flex-flow: column nowrap; justify-content: end; gap: 40px;}
+#wrap main .profile .details_wrap {
+    display: grid; grid-template-columns: 1fr 350px;
+    grid-template-areas: 
+        "experience certification"
+        "education certification"
+        "skill skill"
+    ;
+    align-content: space-between;
+    column-gap: 150px;/* 좌우간격 */
+}
 #wrap main .profile .details_wrap .details {}
 #wrap main .profile .details_wrap .details > h2 {
     font-family: 'Paperozi'; font-size: 1.38rem; font-weight: 600; margin-bottom: 25px;
 }
-#wrap main .profile .details_wrap .details .text_box {}
-#wrap main .profile .details_wrap .details .text_box > p {}
-#wrap main .profile .details_wrap .details .text_box .text_title {}
-#wrap main .profile .details_wrap .details .text_box .text_content {}
-/* right - 툴 목록 */
+#wrap main .profile .details_wrap .experience .text_box:last-child .text_content {margin: 0;}/* margin-bottom 삭제 */
+#wrap main .profile .details_wrap .education .text_box:last-child .text_content {margin: 0;}/* margin-bottom 삭제 */
+/* (왼쪽) 경력 */
+#wrap main .profile .details_wrap .experience {grid-area: experience;}
+/* (오른쪽) 자격증 */
+#wrap main .profile .details_wrap .certification {grid-area: certification;}
+/* (중간)학력/교육사항 */
+#wrap main .profile .details_wrap .education {grid-area: education;}
+/* 스킬 */
+#wrap main .profile .details_wrap .skill {grid-area: skill;}
 #wrap main .profile .details_wrap .details .tools_list {}
 #wrap main .profile .details_wrap .details .tools_list p {
     border: 1px solid #999; border-radius: 30px;
@@ -156,14 +170,16 @@ body {
 #wrap main .profile .details_wrap .details .tools_list .tools_btm {}
 #wrap main .profile .details_wrap .details .tools_list .tools_btm > p {}
 /* 개별 타이틀 가로 크기 */
-#wrap main .profile .details_wrap .experience .text_box .text_title {width: 170px;}
-#wrap main .profile .details_wrap .certification .text_box .text_title {width: 170px;}
-#wrap main .profile .details_wrap .education .text_box .text_title {width: 90px;}
+#wrap main .profile .details_wrap .experience .text_box .text_title {width: 180px;}
+#wrap main .profile .details_wrap .certification .text_box .text_title {width: 100px;}
+#wrap main .profile .details_wrap .education .text_box .text_title {width: 180px;}
 /* 개별 자간 조정 */
 /* 2017.06 - 2020.09 */
-#wrap main .profile .details_wrap .experience .text_box:last-child .text_title {letter-spacing: 1%;}
-/* 2024.02 */
-#wrap main .profile .details_wrap .education .text_box:nth-child(2) .text_title {letter-spacing: -5%;}
+#wrap main .profile .details_wrap .experience .text_box:last-child .text_title {letter-spacing: 0.1px;}
+/* 2025.12 - 2026.05 */
+#wrap main .profile .details_wrap .education .text_box:nth-child(2) .text_title {letter-spacing: 0.2px;}
+/* 2017.02 */
+#wrap main .profile .details_wrap .education .text_box:nth-child(5) .text_title {letter-spacing: 0.6px;}
 
 /* =========================================================== 3. 웹 프로젝트 */
 #wrap main .web_p_wrap {
