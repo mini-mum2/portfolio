@@ -78,11 +78,11 @@ body {
 .project_title > h1 {font-family: 'Paperozi'; font-size: 1.5rem;}
 /* 메인 공통 패딩 */
 #wrap main .web_p_wrap,
-#wrap main .works_wrap {height: 100vh;  padding: 100px 150px;}
+#wrap main .works_wrap {min-height: 100vh; padding: 100px 150px;}
 /* =========================================================== 1. intro */
 #wrap main {}
 #wrap main .intro {
-    height: 100vh;/*  padding: 0 150px; */
+    min-height: 100vh;/*  padding: 0 150px; */
     display: flex; flex-flow: column nowrap; justify-content: center;
     position: relative;/* 구분선 부모 */
 }
@@ -107,7 +107,7 @@ body {
 
 /* =========================================================== 2. 프로필 */
 #wrap main .profile {
-    height: 100vh; padding: 150px 150px;
+    min-height: 100vh; padding: 150px 150px;
     display: flex; justify-content: space-between;
     position: relative;/* 구분선 부모 */
 }
@@ -388,5 +388,8 @@ body {
 #wrap main .works_wrap .popup_bg_v .popup_v .close_vd {position: fixed; right: -70px; top: 0;}
 #wrap main .works_wrap .popup_bg_v .popup_v .close_vd > img {width: 50px;}
 /* =========================================================== footer */
-#wrap footer {background: #1f1f1f; height: 200px; text-align: center;}
-#wrap footer .copyright {color: #eee; font-weight: 300; line-height: 200px;}
+#wrap footer {
+    background: #1f1f1f; height: 200px;
+    display: flex; justify-content: center; align-items: center;
+}
+#wrap footer .copyright {color: #eee; font-weight: 300;}
