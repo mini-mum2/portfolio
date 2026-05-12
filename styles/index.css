@@ -238,7 +238,7 @@ body {
 #wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .figma_wrap {position: relative;}
 #wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .figma_wrap .figma {}
 #wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .figma_wrap .figma_hover {
-    position: absolute; bottom: -50px; left: -4px; gap: 12px; display: flex;
+    position: absolute; bottom: -50px; left: -8px; gap: 12px; display: flex;
     opacity: 0; transition: 0.3s;
 }
 #wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .figma_wrap:hover .figma_hover {opacity: 1;}
@@ -256,6 +256,12 @@ body {
     position: absolute; content: ''; width: 1px; height: 150px;
     left: 250px; top: 360px;
     background: #ccc;
+}
+#wrap main .works_wrap .graphic_wrap {position: relative;}
+#wrap main .works_wrap .graphic_wrap::after {
+    content: "※ 썸네일 클릭 시 작업물을 확인할 수 있습니다.";
+    position: absolute; bottom: -32px; left: 58%;
+    font-size: 0.9rem; color: #555;
 }
 /* ----------------------------------------------------------- 그래픽 / 영상 공통 디자인 */
 #wrap main .works_wrap .graphic_wrap,
