@@ -219,53 +219,37 @@ body {
 #wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_info .text_box .port_link {
     border-bottom: 1px solid #222; padding-bottom: 4px;
 }
-#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link {display: flex; gap: 12px; align-items: center;}
-#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link > a {border: 1px solid #bbb; transition: 0.3s; }
+/* --------------------------------------------------------------------------------------- 프로젝트 결과 링크 버튼 */
+#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link {display: flex; gap: 6px;}
+#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link > a,
+#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .figma_wrap > a {
+    color: #555; font-size: 0.88rem;
+    border-radius: 6px; background-color: #fff; border: 1px solid #bbb;
+    display: flex; align-items: center; width: fit-content; padding-right: 12px;
+    transition: 0.3s;
+}
+/* --------------------------------------------------------------------------------------- 공통 hover */
+#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .proposal:hover,
+#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .github:hover,
+#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .figma_wrap:hover .figma {
+    border: 1px solid #000; color: #000;
+}
+/* --------------------------------------------------------------------------------------- fimga hover */
+#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .figma_wrap {position: relative;}
+#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .figma_wrap .figma {}
+#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .figma_wrap .figma_hover {
+    position: absolute; bottom: -50px; left: -4px; gap: 12px; display: flex;
+    opacity: 0; transition: 0.3s;
+}
+#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .figma_wrap:hover .figma_hover {opacity: 1;}
+#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .figma_wrap .figma_hover a {
+    font-size: 0.94rem; color: #555; padding: 28px 6px 10px; font-size: 0.94rem;
+    border-bottom: 1px solid transparent; transition: 0.3s; 
+}
+#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .figma_wrap .figma_hover a:hover {
+    border-bottom: 1px solid #000; color: #000;
+}
 
-/* --------------------------------------------------------------------------------------- 러쉬 아이콘 숨기기 */
-#wrap main .web_p_wrap .web_p_contents .project2 .web_link .proposal {display: none;}
-#wrap main .web_p_wrap .web_p_contents .project2 .web_link .github {display: none;}
-/* --------------------------------------------------------------------------------------- 공통 hover(우선 뉴발만) */
-#wrap main .web_p_wrap .web_p_contents .project1 .web_text .web_link .prototype {
-    border-radius: 50%; position: relative;
-}
-#wrap main .web_p_wrap .web_p_contents .project1 .web_text .web_link .prototype:hover {border: 1px solid #000;}
-/* --------------------------------------------------------------------------------------- 러쉬 아이콘 - 나중에 삭제하기 */
-#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .prototype {border-radius: 50%;}
-#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .text_link {
-    border: none; margin-right: 6px; line-height: 2; padding: 0 5px;
-    color: #555; border-bottom: 1px solid transparent;
-}
-#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .text_link:hover {
-    color: #000; border-bottom: 1px solid #000;
-}
-
-/* --------------------------------------------------------------------------------------- 개별 hover */
-
-#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .proposal::after {/* 기획서 */
-    content: '기획서';
-    position: absolute; left: 50%; transform: translateX(-50%); bottom: -30px;
-    white-space: nowrap; font-size: 0.88rem; color: #222;
-    transition: 0.3s; opacity: 0;
-}
-#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .proposal:hover::after {opacity: 1;}
-
-/* --------------------------------------------------------------------------------------------피그마 프로토타입(우선 뉴발만) */
-#wrap main .web_p_wrap .web_p_contents .project1 .web_text .web_link .figma::after {/* 피그마 */
-    content: '피그마 프로토타입';
-    position: absolute; left: 50%; transform: translateX(-50%); bottom: -30px;
-    white-space: nowrap; font-size: 0.88rem; color: #222;
-    transition: 0.3s; opacity: 0;
-}
-#wrap main .web_p_wrap .web_p_contents .project1 .web_text .web_link .figma:hover::after {opacity: 1;}
-#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .github::after {/* 깃허브 */
-    content: '깃허브 프로토타입';
-    position: absolute; left: 50%; transform: translateX(-50%); bottom: -30px;
-    white-space: nowrap; font-size: 0.88rem; color: #222;
-    transition: 0.3s; opacity: 0;
-}
-#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .github:hover::after {opacity: 1;}
-#wrap main .web_p_wrap .web_p_contents .web_project .web_text .web_link .prototype img {width: 100%; display: block;}
 /* =========================================================== 4. 기타 작업물 */
 #wrap main .works_wrap {position: relative;}/* 세로선 기준(부모) */
 #wrap main .works_wrap::before {/* 세로선 */
