@@ -74,6 +74,7 @@ body {
 .text_box > p {}
 .text_box .text_title {}
 .text_box .text_content {font-weight: 300; color: #222; margin-bottom: 20px;}
+.text_box .text_content span {font-weight: 300; color: #222; margin-bottom: 20px; font-size: 0.85rem;}
 /* 프로젝트 공통 */
 .project_title > h1 {font-family: 'Paperozi'; font-size: 1.5rem;}
 /* 메인 공통 패딩 */
