@@ -109,11 +109,11 @@ const portGraphic = [{
     h: 90,
 },{
     src:'images/works/popup_02.jpg',
-    w: 40,
+    w: 30,
     h: 90,
 },{
     src: 'images/works/popup_03.jpg',
-    w: 40,
+    w: 30,
     h: 90,
 },{
     src: 'images/works/popup_04.jpg',
