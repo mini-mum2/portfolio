@@ -7,6 +7,20 @@
  */
 
 
+//header 스크롤 이벤트
+const header = document.querySelector('#wrap header');
+//console.log(header);
+
+window.addEventListener('scroll',function(){
+    //스크롤 100px 이상 내려가면
+    if(window.scrollY >= 200){
+        header.classList.add('scroll');
+    }else{
+        header.classList.remove('scroll');
+    }
+});
+
+
 // header gnb 클릭 -> 해당 섹션으로 이동
 const gnbTitle = document.querySelectorAll('#gnb a');
 const gnbContent = document.querySelectorAll('main section');

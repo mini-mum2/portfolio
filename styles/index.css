@@ -55,9 +55,11 @@ body {
 }
 /* =========================================================== header */
 #wrap header {
-    position: fixed; left: 0; top: 0; width: 100%;; z-index: 999;
-    padding: 0 130px; background: rgba(255, 255, 255, 0.8);
+    position: fixed; left: 0; top: 0; width: 100%; z-index: 999;
+    padding: 0 130px;
+    background: transparent;
 }
+#wrap header.scroll {background: rgba(255, 255, 255, 0.8);}
 #wrap header #gnb {display: inline-block; white-space: nowrap;}
 #wrap header #gnb a {
     font-family: 'Paperozi'; font-size: 1rem;
