@@ -83,7 +83,7 @@ const graphicSwiper = new Swiper(graphicSlide,{
         //마우스 올라가면 일시정지(true)
         pauseOnMouseEnter: true,
     },
-    speed:1000,
+    speed:2000,
     spaceBetween: 20,
     slidesPerView: 3,
     navigation:{
@@ -102,7 +102,7 @@ const videoSwiper = new Swiper(videoSlide,{
         delay:3000,
         pauseOnMouseEnter: true,
     },
-    speed:1000,
+    speed:2000,
     spaceBetween: 20,
     slidesPerView: 3,
     navigation:{
